@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>You write code for you not the interpreter (or compiler) | Ed writes that blog</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="You write code for you not the interpreter (or compiler)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I love software. What I mean by that is that I love writing software. But what I really mean by that is that I love reading and writing software. You see, whenever you write a line of code you have most surely read at least ten, a hundred or even more. You even have to read the line you just typed and make sure it makes sense." />
+<meta property="og:description" content="I love software. What I mean by that is that I love writing software. But what I really mean by that is that I love reading and writing software. You see, whenever you write a line of code you have most surely read at least ten, a hundred or even more. You even have to read the line you just typed and make sure it makes sense." />
+<link rel="canonical" href="edwrites.blog/2016/05/10/youwrite-code-for-you-not-the-interpreter.html" />
+<meta property="og:url" content="edwrites.blog/2016/05/10/youwrite-code-for-you-not-the-interpreter.html" />
+<meta property="og:site_name" content="Ed writes that blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-05-10T20:07:13-05:00" />
+<script type="application/ld+json">
+{"description":"I love software. What I mean by that is that I love writing software. But what I really mean by that is that I love reading and writing software. You see, whenever you write a line of code you have most surely read at least ten, a hundred or even more. You even have to read the line you just typed and make sure it makes sense.","@type":"BlogPosting","url":"edwrites.blog/2016/05/10/youwrite-code-for-you-not-the-interpreter.html","headline":"You write code for you not the interpreter (or compiler)","dateModified":"2016-05-10T20:07:13-05:00","datePublished":"2016-05-10T20:07:13-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"edwrites.blog/2016/05/10/youwrite-code-for-you-not-the-interpreter.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="edwrites.blog/feed.xml" title="Ed writes that blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ed writes that blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">You write code for you not the interpreter (or compiler)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2016-05-10T20:07:13-05:00" itemprop="datePublished">May 10, 2016
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I love software. What I mean by that is that I love writing software. But what I really mean by that is that I love reading and writing software. You see, whenever you write a line of code you have most surely read at least ten, a hundred or even more. You even have to read the line you just typed and make sure it makes sense.</p>
+
+<p>What I mean to say is that the time you use reading software far outweighs the time you use writing it. I’m by all means that last person to say this.</p>
+
+<p>Either way, what I usually see from teammates’ code and code tests from developer candidates I review at Grability is that people haven’t internalize the actual implications of that fact. If reading code is what you’re gonna be doing MOST of your time, then you should spend MOST of your writing time making sure that reading it later is as easy and straightforward as it gets. Making code work is only half the job. The easy half for that matter (although it is hard). Making sure it’s easy to read and understand is what takes all of your attention. <strong>Everyday</strong>. In the good days when you care deeply for your code base and (specially) in the bad days where you just want to get shit done and move on. That <strong>is</strong> the hard part.</p>
+
+<p>Everybody seems to take that last part for granted. That you only need to get things to work before moving on. That next time you revisit the code and try to understand it (understanding it will always come before fixing or extending) things will flow naturally. That, as we all know, is not the case. Good news is that both the easy and the hard part of writing code, are not rocket science. We all can do it. So, here I want to share simple rules of thumb I have learnt so far that I think can help you write code that’s easier to understand, as they have helped me and my team:</p>
+
+<h4 id="-say-what-you-meannaming-is-hard">&gt; Say what you mean/<a href="https://www.sitepoint.com/whats-in-a-name-anti-patterns-to-a-hard-problem/">naming is hard</a>:</h4>
+<p>Let’s say you need to create a method that returns the closest stores to your location. Chances are people will name it something like:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">get_stores</span><span class="p">(</span><span class="nx">location</span><span class="p">)</span></code></pre></figure>
+
+<p>(don’t believe me? go open a random class in yours or somebody else’s code base, you’ll be lucky to find something better). I think you should instead ask yourself, what does that method do? Well, it returns the closest stores to your location. So, why not use a name that actually describes what it does. Something like:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">get_closest_stores_to</span><span class="p">(</span><span class="nx">location</span><span class="p">)</span>
+<span class="c1">// or maybe</span>
+<span class="nx">get_nearby_stores_for</span><span class="p">(</span><span class="nx">location</span><span class="p">)</span></code></pre></figure>
+
+<p>A couple of characters to spare won’t hurt anybody. Take the time to make sure the name you choose <em>conveys</em> what the code is actually doing.</p>
+
+<h4 id="-mean-what-you-say-avoid-surprises">&gt; Mean what you say/ avoid surprises:</h4>
+<p>If you have a <code class="highlighter-rouge">get_nearby_stores_for(location)</code> method, people wouldn’t expect it to run any update on the database or more generally to have any side effect. Take the time to make sure the code you’re adding doesn’t invalidate previous chosen names in a way that people reading the name may be surprised by the contents of the method, or variable or class. For instance, no method that starts with a get should have any side effects.</p>
+
+<h4 id="-never-use-boolean-parameters">&gt; Never use boolean parameters:</h4>
+<p>You’ll never ever ever remember what <code class="highlighter-rouge">delete_from(location, false)</code> does. In contrast, you don’t have to remember what <code class="highlighter-rouge">delete_recursively_from(location)</code> does. It’s right there. This doesn’t mean you have to duplicate code in <code class="highlighter-rouge">delete_from</code> and <code class="highlighter-rouge">delete_recursively_from</code>, you should use boolean parameters if that removes duplication (<a href="http://verraes.net/2014/08/dry-is-about-knowledge/">not in code but in knowledge</a>) but your public method names should be as easy to read as possible.</p>
+
+<h4 id="-negated-values-are-harder-to-reason-about">&gt; Negated values are harder to reason about:</h4>
+<p>I think this is not as relevant in Ruby as it is in most languages, since you can use the amazing <code class="highlighter-rouge">unless</code> syntax, but it’s harder for most people to understand:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">if</span><span class="p">(</span><span class="o">!</span> <span class="nb">is_null</span><span class="p">(</span><span class="nv">$newHash</span><span class="p">))</span> <span class="p">{</span>
+ <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+ <span class="nv">$storeIdBlackList</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$nearbyStore</span><span class="o">-&gt;</span><span class="na">store_id</span><span class="p">;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">if</span><span class="p">(</span> <span class="nb">is_null</span><span class="p">(</span><span class="nv">$newHash</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+ <span class="nv">$storeIdBlackList</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$nearbyStore</span><span class="o">-&gt;</span><span class="na">store_id</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+ <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>(This is the actual piece of code that encouraged me to write this post). While we’re at it, try an add a blank space after the !. It makes a HUGE difference as it accentuates it’s presence so it’s way harder to miss it when reading.</p>
+
+<h4 id="-be-consistent">&gt; Be consistent:</h4>
+<p>If you prefix private variables with __ then do it everywhere. If you’re in JS and you don’t want to add a semicolon at the end of each line, don’t add it anywhere. If you name the classes that interact with the DB “Repository”, name all classes with the same purpose “Repository”. Take the time to choose the right name for the thing you’re creating and once you do, stick with it. There are times for creativity and there are times for just being rigorous. This doesn’t mean you have to stick with names you don’t like or are not applicable anymore, it means that if you change the meaning of a concept then that meaning should change all across the specific <a href="http://verraes.net/2014/02/buzzword-free-bounded-contexts/">context</a>, given your application is large enough, or all across your code base, if it isn’t.</p>
+
+<p>Avoid as much as you can naming things the same way if they behave differently, or differently is they behave in the same manner. Create a vocabulary, a set of concepts for you code base and then just follow it.</p>
+
+<h4 id="-give-names-to-code-that-is-not-obvious">&gt; Give names to code that is not obvious:</h4>
+<p>Most of the times where you’re reading code, you don’t need to understand every specific detail. You need to understand the general picture and then understand some specific parts of the implementation that might be related to what you’re trying to fix or add. This means that while reading you should be able <em>opt-in</em> to know <strong>how</strong> some specifics are implemented after you know <strong>what</strong> the implementation is doing. There’s no need to overwhelm future you with all the details up front. Let’s say you have something like this:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">if</span> <span class="p">(</span><span class="nb">substr_count</span><span class="p">(</span><span class="nv">$file</span><span class="p">,</span> <span class="err">‘</span><span class="o">-</span><span class="err">’</span> <span class="o">.</span> <span class="nv">$versionToDelete</span><span class="o">-&gt;</span><span class="na">id</span> <span class="o">.</span> <span class="nx">self</span><span class="o">::</span><span class="na">EXTENSION_SQL</span><span class="p">)</span> <span class="o">==</span> <span class="nx">self</span><span class="o">::</span><span class="na">MATCHES_VERSIONS_IN_DELTA</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="nv">$file</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>At first when you read this code, you don’t need to know <strong>how</strong> you decide if you need to delete a file. You need to know <strong>that</strong> (what) depending on something you may delete or not the file. The alternative looks something like this:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fileIsDelta</span><span class="p">(</span><span class="nv">$file</span><span class="p">))</span> <span class="p">{</span>
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="nv">$file</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// .....</span>
+<span class="k">protected</span> <span class="k">function</span> <span class="nf">fileIsDelta</span><span class="p">(</span><span class="nv">$file</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="nb">substr_count</span><span class="p">(</span><span class="nv">$file</span><span class="p">,</span> <span class="err">‘</span><span class="o">-</span><span class="err">’</span> <span class="o">.</span> <span class="nv">$versionToDelete</span><span class="o">-&gt;</span><span class="na">id</span> <span class="o">.</span> <span class="nx">self</span><span class="o">::</span><span class="na">EXTENSION_SQL</span><span class="p">)</span> <span class="o">==</span> <span class="nx">self</span><span class="o">::</span><span class="na">MATCHES_VERSIONS_IN_DELTA</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This way, if after knowing <strong>what</strong> is happening you know that you have to change how files are filtered to be deleted then you <em>opt-in</em> the specifics and read the <em>fileIsDelta</em> method implementation.</p>
+
+<h4 id="-give-a-shit">&gt; Give a shit:</h4>
+<p>Most of all, we all need to give a shit about how code reads. This, I think, is the most difficult thing to actually do. You have to ask yourself every time you‘re writing code.</p>
+<blockquote>
+  <p>Is this self explanatory?</p>
+</blockquote>
+
+<blockquote>
+  <p>Is it easy to know what is happening in this piece of code?</p>
+</blockquote>
+
+<blockquote>
+  <p>Is it easy to understand the general picture of what’s happening?</p>
+</blockquote>
+
+<blockquote>
+  <p>Can people other than me (most surely future me) read this without jumping back and forth between parts of the file or different files?</p>
+</blockquote>
+
+<p>Last but not least, I want to stress out that you don’t need to give every line of code 1 hour of reviewing and name choosing. You can’t afford it, you need to get shit done NOW. Likewise, you can’t spend zero seconds reviewing code, being consistent and avoiding surprises. Future you also needs to get shit done. There’s a balance between the two of you, a trade off, and keeping it is the beauty of doing the thing we love to do. Writing code.</p>
+
+<hr />
+<p>Most of the things I wrote here came from some of the following resources, they’re amazing, give them a try: <a href="http://www.poodr.com/">Practical Object-Oriented Design in Ruby</a>, <a href="https://www.youtube.com/watch?v=DC-pQPq0acs">Refactoring from Good to Great</a>, <a href="https://www.youtube.com/watch?v=J4dlF0kcThQ">Therapeutic Refactoring</a>, <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>.</p>
+
+
+  </div><a class="u-url" href="/2016/05/10/youwrite-code-for-you-not-the-interpreter.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ed writes that blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ed writes that blog</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Edgpaez"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Edgpaez</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is Ed&#39;s blog about software design, programming and sotware engineering in general</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
