@@ -11,7 +11,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 400 19px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -54,7 +54,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 16.625px; }
 
 /**
  * Lists
@@ -95,7 +95,7 @@ blockquote {
   color: #828282;
   border-left: 4px solid #e8e8e8;
   padding-left: 15px;
-  font-size: 18px;
+  font-size: 21.375px;
   letter-spacing: -1px;
   font-style: italic; }
   blockquote > :last-child {
@@ -106,7 +106,7 @@ blockquote {
  */
 pre,
 code {
-  font-size: 15px;
+  font-size: 17.8125px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
   background-color: #eef; }
@@ -192,9 +192,9 @@ table {
   position: relative; }
 
 .site-title {
-  font-size: 26px;
+  font-size: 30.875px;
   font-weight: 300;
-  line-height: 61.2px;
+  line-height: 68.4px;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left; }
@@ -203,14 +203,14 @@ table {
 
 .site-nav {
   float: right;
-  line-height: 61.2px; }
+  line-height: 68.4px; }
   .site-nav .nav-trigger {
     display: none; }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
     color: #111;
-    line-height: 1.7; }
+    line-height: 1.6; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
   @media screen and (max-width: 600px) {
@@ -260,7 +260,7 @@ table {
   padding: 30px 0; }
 
 .footer-heading {
-  font-size: 18px;
+  font-size: 21.375px;
   margin-bottom: 15px; }
 
 .contact-list,
@@ -269,7 +269,7 @@ table {
   margin-left: 0; }
 
 .footer-col-wrapper {
-  font-size: 15px;
+  font-size: 17.8125px;
   color: #828282;
   margin-left: -15px; }
 
@@ -312,10 +312,10 @@ table {
   flex: 1; }
 
 .page-heading {
-  font-size: 32px; }
+  font-size: 38px; }
 
 .post-list-heading {
-  font-size: 28px; }
+  font-size: 33.25px; }
 
 .post-list {
   margin-left: 0;
@@ -324,12 +324,12 @@ table {
     margin-bottom: 30px; }
 
 .post-meta {
-  font-size: 14px;
+  font-size: 16.625px;
   color: #828282; }
 
 .post-link {
   display: block;
-  font-size: 24px; }
+  font-size: 28.5px; }
 
 /**
  * Posts
@@ -338,30 +338,32 @@ table {
   margin-bottom: 30px; }
 
 .post-title {
-  font-size: 42px;
+  font-size: 49.875px;
   letter-spacing: -1px;
-  line-height: 1; }
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.84); }
   @media screen and (max-width: 800px) {
     .post-title {
-      font-size: 36px; } }
+      font-size: 42.75px; } }
 
 .post-content {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  color: rgba(0, 0, 0, 0.84); }
   .post-content h2 {
-    font-size: 32px; }
+    font-size: 38px; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
-        font-size: 28px; } }
+        font-size: 33.25px; } }
   .post-content h3 {
-    font-size: 26px; }
+    font-size: 30.875px; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
-        font-size: 22px; } }
+        font-size: 26.125px; } }
   .post-content h4 {
-    font-size: 20px; }
+    font-size: 23.75px; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
-        font-size: 18px; } }
+        font-size: 21.375px; } }
 
 /**
  * Syntax highlighting styles
